@@ -24,7 +24,7 @@ namespace Wildlife.Controllers
         public IActionResult Details(int id)
         {
             var thisSighting = db.Sighting.FirstOrDefault(sighting => sighting.SightingId == id);
-            return View(thisSighting);
+            return View(thisSighting.Species);
         }
     }
 }
