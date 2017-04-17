@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Wildlife.Models.Sighting>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Wildlife Tracker</title>
+</head>
+<body>
+    <h1>Sighting</h1>
+
+    <h4>@Html.DisplayNameFor(model => model.date)</h4>
+    <ul>
+        @foreach (var listSighting in Model)
+        {
+            <li>@Html.DisplayFor(modelSighting => listSighting.date)|@Html.ActionLink("Details", "Details", new { id = listSighting.SightingId })</li>
+        }
+    </ul>
+</body>
+</html>

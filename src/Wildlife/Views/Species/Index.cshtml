@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+@model IEnumerable<Wildlife.Models.Species>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Wildlife Tracker</title>
+</head>
+<body>
+    <h1>Speices</h1>
+
+    <h4>@Html.DisplayNameFor(model => model.Name)</h4>
+    <ul>
+        @foreach(var listSpecies in Model)
+        {
+        <li>@Html.DisplayFor(modelSpecies => listSpecies.Name)|@Html.ActionLink("Details","Details", new { id = listSpecies.SpeciesId })</li>
+        }     
+    </ul>
+</body>
+</html>
